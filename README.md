@@ -1,6 +1,6 @@
 # 📋 RegistrationApp
 
-A Java Web Application that allows users to register via an HTML form. Form data is stored in a MySQL database using a Java Servlet backend, deployed on Apache Tomcat.
+A Simple Java Web Application that allows users to register via an HTML form. Form data is stored in a MySQL database using a Java Servlet backend, deployed on Apache Tomcat.
 
 ---
 
@@ -21,10 +21,24 @@ A Java Web Application that allows users to register via an HTML form. Form data
 
 ```
 RegistrationApp/
-├── src/main/java/
-│   └── RegisterServlet.java      # Handles form submission & DB insert
-├── src/main/webapp/
-│   └── index.html                # Registration form UI
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── RegisterServlet.java        # Servlet handling form POST request
+│       └── webapp/
+│           ├── index.html                  # Registration form UI (HTML + CSS)
+│           ├── WEB-INF/
+│           │   ├── web.xml                 # Deployment descriptor
+│           │   └── lib/
+│           │       └── mysql-connector-j.jar  # MySQL JDBC driver
+│           └── META-INF/
+│               └── MANIFEST.MF
+├── build/
+│   └── classes/                            # Compiled .class files
+├── .settings/                              # Eclipse IDE settings
+├── .classpath                              # Eclipse classpath config
+├── .project                                # Eclipse project config
+└── .gitignore
 ```
 
 ---
@@ -46,12 +60,16 @@ RegistrationApp/
 
 ---
 
-## 🔮 Future Improvements
+## 💡 Concepts Used
 
-- [ ] Password hashing (BCrypt)
-- [ ] Login & session management
-- [ ] Server-side input validation
-- [ ] Move credentials to a config file
+- **Java Servlets** — Server-side Java class handling HTTP POST requests from the form
+- **JDBC (Java Database Connectivity)** — Connecting and executing queries on MySQL from Java
+- **PreparedStatement** — Safely inserting user data into the DB, preventing SQL injection
+- **HTML Forms** — Capturing user input and sending it to the servlet via POST method
+- **CSS Styling** — Gradient background, card layout, and styled input fields
+- **MVC Pattern** — Separation of UI (index.html) and logic (RegisterServlet.java)
+- **Tomcat Deployment** — Running the app as a Dynamic Web Project on Apache Tomcat 9.0
+- **Annotation-based Servlet Mapping** — Using `@WebServlet("/RegisterServlet")` instead of web.xml
 
 ---
 
