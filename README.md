@@ -60,7 +60,7 @@ A collection of Java web applications demonstrating real-world implementation of
 
 | Layer | Technology |
 |---|---|
-| Language | Java (JDK 8+) |
+| Language | Java (JDK 17) |
 | Web Layer | Servlet API, JSP |
 | Database | MySQL |
 | DB Access | JDBC |
