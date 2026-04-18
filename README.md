@@ -44,7 +44,7 @@ A collection of Java web applications demonstrating real-world implementation of
 - Delegates to the Model layer for DB operations
 - Controls navigation flow using `sendRedirect()`
 
-### 🧠 Model — `UserModel.java`
+### 🧠 Model — `Model.java`
 - Encapsulates user data and business logic
 - Executes INSERT queries via `PreparedStatement`
 - Uses `DBConnection.java` utility for connection management
