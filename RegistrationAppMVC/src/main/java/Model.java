@@ -1,8 +1,4 @@
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-
+import java.sql.*;
 public class Model {
 	
 	private String name;
@@ -56,7 +52,7 @@ public class Model {
     public int register() {
     try
     {
-    	connect = JdbcUtilityClass.getDBConnection();
+    	connect = JdbcUtil.getDBConnection();
     	String sql = "insert into users(name,email,upassword,city) values(?,?,?,?)";
         pstmnt = connect.prepareStatement(sql);
         
@@ -74,7 +70,7 @@ public class Model {
          finally
          {
         	try {
-        		JdbcUtilityClass.closeResources(connect, pstmnt, null);
+        		JdbcUtil.closeResources(connect, pstmnt, null);
         	}
         	catch(SQLException e)
         	{

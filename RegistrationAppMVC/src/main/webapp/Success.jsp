@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Registration Successful</title>
 </head>
 <body>
 <h1>Registration Successful!</h1>
 <% String name =(String)session.getAttribute("name"); %>
-<p>hey <%=name%>, registration Successful. congrats.</p>
+<p>hey <%=name%>, registration Successful. Welcome to the page....</p>
 </body>
 </html>

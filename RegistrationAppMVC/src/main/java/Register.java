@@ -8,8 +8,8 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	
-
-	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String name = request.getParameter("name");
 	  String email = request.getParameter("email");
@@ -30,6 +30,7 @@ public class Register extends HttpServlet {
 		session.setAttribute("email",email);
 		 session.setAttribute("upassword",upassword);
 		 session.setAttribute("city",city);
+		 System.out.println(name + " " + email + " " + upassword + " " + city);
 		if(row == 0)
 		{
 			response.sendRedirect("/RegistrationAppMVC/failure.jsp");
